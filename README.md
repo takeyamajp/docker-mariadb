@@ -1,1 +1,3 @@
-# docker-mariadb
+FROM mariadb
+
+MAINTAINER "Hiroki Takeyama"
