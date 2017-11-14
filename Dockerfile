@@ -6,6 +6,7 @@ ENV TZ Asia/Tokyo
 
 # entrypoint
 RUN { \
+    echo '#!/bin/bash -eu'; \
     echo '{'; \
     echo '    echo "[client]";'; \
     echo '    echo "default-character-set = $MYSQL_CHARSET";'; \
@@ -14,7 +15,6 @@ RUN { \
     echo '    echo "collation-server = $MYSQL_CHARSET_unicode_ci";'; \
     echo '    echo "character-set-server = $MYSQL_CHARSET";'; \
     echo '    echo "skip-character-set-client-handshake";'; \
-#    echo '    echo "default_password_lifetime = 0";'; \
     echo '} > /etc/mysql/conf.d/charset.cnf'; \
     echo 'exec "$@"'; \
 } > /usr/local/bin/entrypoint.sh
