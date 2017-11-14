@@ -16,10 +16,10 @@ RUN { \
     echo '    echo "character-set-server = ${MYSQL_CHARSET}";'; \
     echo '    echo "skip-character-set-client-handshake";'; \
     echo '} > /etc/mysql/conf.d/charset.cnf'; \
-    echo '/usr/local/bin/docker-entrypoint.sh "$@"'; \
+    echo 'docker-entrypoint.sh "$@"'; \
 } > /usr/local/bin/my-entrypoint.sh
 RUN chmod +x /usr/local/bin/my-entrypoint.sh
-ENTRYPOINT ["/usr/local/bin/my-entrypoint.sh"]
+ENTRYPOINT ["my-entrypoint.sh"]
 
 # mysql character-set
 ENV MYSQL_CHARSET utf8mb4
