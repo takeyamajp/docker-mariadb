@@ -17,8 +17,8 @@ RUN { \
     echo '  echo "skip-character-set-client-handshake";'; \
     echo '} > /etc/mysql/conf.d/charset.cnf'; \
     echo 'docker-entrypoint.sh "$@"'; \
-    } > /usr/local/bin/my-entrypoint.sh
-RUN chmod +x /usr/local/bin/my-entrypoint.sh
+    } > /usr/local/bin/my-entrypoint.sh; \
+    chmod +x /usr/local/bin/my-entrypoint.sh;
 ENTRYPOINT ["my-entrypoint.sh"]
 
 # mysql character-set
