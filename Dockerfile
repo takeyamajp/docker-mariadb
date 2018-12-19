@@ -21,7 +21,7 @@ RUN { \
     chmod +x /usr/local/bin/my-entrypoint.sh;
 ENTRYPOINT ["my-entrypoint.sh"]
 
-# mysql character-set
+# mysql character-code
 ENV MYSQL_CHARSET utf8mb4
 ENV MYSQL_COLLATION utf8mb4_general_ci
 
