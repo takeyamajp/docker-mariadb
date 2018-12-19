@@ -12,8 +12,8 @@ RUN { \
     echo '  echo "default-character-set = ${MYSQL_CHARSET}";'; \
     echo '  echo "[mysqld]";'; \
     echo '  echo "init-connect = SET NAMES ${MYSQL_CHARSET}";'; \
-    echo '  echo "collation-server = ${MYSQL_CHARSET}_unicode_ci";'; \
     echo '  echo "character-set-server = ${MYSQL_CHARSET}";'; \
+    echo '  echo "collation-server = ${MYSQL_COLLATION}";'; \
     echo '  echo "skip-character-set-client-handshake";'; \
     echo '} > /etc/mysql/conf.d/charset.cnf'; \
     echo 'docker-entrypoint.sh "$@"'; \
@@ -23,6 +23,7 @@ ENTRYPOINT ["my-entrypoint.sh"]
 
 # mysql character-set
 ENV MYSQL_CHARSET utf8mb4
+ENV MYSQL_COLLATION utf8mb4_general_ci
 
 # mysql password
 ENV MYSQL_ROOT_PASSWORD root
