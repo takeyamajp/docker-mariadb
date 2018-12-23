@@ -8,13 +8,13 @@ ENV TZ Asia/Tokyo
 RUN { \
     echo '#!/bin/bash -eu'; \
     echo '{'; \
-    echo 'echo "[client]";'; \
-    echo 'echo "default-character-set = ${MYSQL_CHARSET}";'; \
-    echo 'echo "[mysqld]";'; \
-    echo 'echo "init-connect = SET NAMES ${MYSQL_CHARSET}";'; \
-    echo 'echo "character-set-server = ${MYSQL_CHARSET}";'; \
-    echo 'echo "collation-server = ${MYSQL_COLLATION}";'; \
-    echo 'echo "skip-character-set-client-handshake";'; \
+    echo 'echo "[client]"'; \
+    echo 'echo "default-character-set = ${MYSQL_CHARSET}"'; \
+    echo 'echo "[mysqld]"'; \
+    echo 'echo "init-connect = SET NAMES ${MYSQL_CHARSET}"'; \
+    echo 'echo "character-set-server = ${MYSQL_CHARSET}"'; \
+    echo 'echo "collation-server = ${MYSQL_COLLATION}"'; \
+    echo 'echo "skip-character-set-client-handshake"'; \
     echo '} > /etc/mysql/conf.d/charcode.cnf'; \
     echo 'docker-entrypoint.sh "$@"'; \
     } > /usr/local/bin/entrypoint.sh; \
