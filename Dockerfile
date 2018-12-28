@@ -4,8 +4,8 @@ MAINTAINER "Hiroki Takeyama"
 # timezone
 ENV TZ Asia/Tokyo
 
-# symbolic link
-RUN ln -s /var/lib/mysql /mysql;
+# hard link
+RUN ln -F /var/lib/mysql /mysql;
 
 # entrypoint
 RUN { \
