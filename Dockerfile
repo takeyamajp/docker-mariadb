@@ -5,7 +5,8 @@ MAINTAINER "Hiroki Takeyama"
 ENV TZ Asia/Tokyo
 
 # mount
-RUN mount --bind /var/lib/mysql /mysql;
+RUN mkdir /mysql; \
+    mount --bind /var/lib/mysql /mysql;
 
 # entrypoint
 RUN { \
