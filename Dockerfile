@@ -4,9 +4,6 @@ MAINTAINER "Hiroki Takeyama"
 # timezone
 ENV TZ Asia/Tokyo
 
-# hard link
-RUN ln -F /var/lib/mysql /mysql;
-
 # entrypoint
 RUN { \
     echo '#!/bin/bash -eu'; \
@@ -34,7 +31,7 @@ ENV MYSQL_DATABASE db
 ENV MYSQL_USER user
 ENV MYSQL_PASSWORD user
 
-VOLUME /mysql
+VOLUME /var/lib/mysql
 
 EXPOSE 3306
 
