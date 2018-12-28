@@ -4,8 +4,8 @@ MAINTAINER "Hiroki Takeyama"
 # timezone
 ENV TZ Asia/Tokyo
 
-# hard link
-RUN ln /var/lib/mysql /mysql;
+# mount
+RUN mount --bind /var/lib/mysql /mysql;
 
 # entrypoint
 RUN { \
