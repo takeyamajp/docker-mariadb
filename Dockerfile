@@ -16,7 +16,7 @@ RUN { \
     echo 'echo "collation-server = ${MYSQL_COLLATION}"'; \
     echo 'echo "skip-character-set-client-handshake"'; \
     echo '} > /etc/mysql/conf.d/charcode.cnf'; \
-    echo 'docker-entrypoint.sh "$@"'; \
+    echo 'exec "$@"'; \
     } > /usr/local/bin/entrypoint.sh; \
     chmod +x /usr/local/bin/entrypoint.sh;
 ENTRYPOINT ["entrypoint.sh"]
@@ -35,4 +35,4 @@ VOLUME /var/lib/mysql
 
 EXPOSE 3306
 
-CMD ["mysqld"]
+CMD ["docker-entrypoint.sh", "mysqld"]
