@@ -1,9 +1,6 @@
 FROM mariadb
 MAINTAINER "Hiroki Takeyama"
 
-# timezone
-ENV TZ Asia/Tokyo
-
 # entrypoint
 RUN { \
     echo '#!/bin/bash -eu'; \
@@ -20,6 +17,9 @@ RUN { \
     } > /usr/local/bin/entrypoint.sh; \
     chmod +x /usr/local/bin/entrypoint.sh;
 ENTRYPOINT ["entrypoint.sh"]
+
+# timezone
+ENV TZ Asia/Tokyo
 
 # mysql character-code
 ENV MYSQL_CHARSET utf8mb4
