@@ -1,6 +1,7 @@
 # mariadb
 [![Docker Stars](https://img.shields.io/docker/stars/takeyamajp/mariadb.svg?style=flat-square)](https://hub.docker.com/r/takeyamajp/mariadb/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/takeyamajp/mariadb.svg?style=flat-square)](https://hub.docker.com/r/takeyamajp/mariadb/)
+[![license](https://img.shields.io/github/license/u6k/plantuml-image-generator.svg)](https://github.com/u6k/plantuml-image-generator/blob/master/LICENSE)
 
 FROM mariadb  
 MAINTAINER "Hiroki Takeyama"
