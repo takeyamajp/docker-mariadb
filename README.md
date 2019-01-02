@@ -1,3 +1,6 @@
+[![Docker Stars](https://img.shields.io/docker/stars/takeyamajp/mariadb.svg?style=flat-square)](https://hub.docker.com/r/takeyamajp/mariadb/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/takeyamajp/mariadb.svg?style=flat-square)](https://hub.docker.com/r/takeyamajp/mariadb/)
+
 FROM mariadb  
 MAINTAINER "Hiroki Takeyama"
 
