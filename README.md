@@ -1,6 +1,6 @@
 # mariadb
-[![Docker Stars](https://img.shields.io/docker/stars/takeyamajp/mariadb.svg?style=flat-square)](https://hub.docker.com/r/takeyamajp/mariadb/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/takeyamajp/mariadb.svg?style=flat-square)](https://hub.docker.com/r/takeyamajp/mariadb/)
+[![Docker Stars](https://img.shields.io/docker/stars/takeyamajp/mariadb.svg)](https://hub.docker.com/r/takeyamajp/mariadb/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/takeyamajp/mariadb.svg)](https://hub.docker.com/r/takeyamajp/mariadb/)
 [![license](https://img.shields.io/github/license/takeyamajp/docker-mariadb.svg)](https://github.com/takeyamajp/docker-mariadb/blob/master/LICENSE)
 
     FROM mariadb  
