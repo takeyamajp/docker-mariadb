@@ -1,4 +1,4 @@
-FROM mariadb
+FROM mariadb:10
 MAINTAINER "Hiroki Takeyama"
 
 # entrypoint
