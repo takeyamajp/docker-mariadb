@@ -1,6 +1,10 @@
 FROM mariadb:10
 MAINTAINER "Hiroki Takeyama"
 
+# mysql
+RUN mkdir /mysql; \
+    sed -i 's/^\(datadir\) .*/\1 = \/mysql/' /etc/mysql/my.cnf;
+
 # entrypoint
 RUN { \
     echo '#!/bin/bash -eu'; \
@@ -31,7 +35,7 @@ ENV MYSQL_DATABASE db
 ENV MYSQL_USER user
 ENV MYSQL_PASSWORD password
 
-VOLUME /var/lib/mysql
+VOLUME /mysql
 
 EXPOSE 3306
 
