@@ -17,10 +17,10 @@ RUN { \
     echo 'echo "collation-server = ${MYSQL_COLLATION}"'; \
     echo 'echo "skip-character-set-client-handshake"'; \
     echo '} > /etc/mysql/conf.d/charcode.cnf'; \
+    echo 'chown mysql:mysql /mysql'; \
     echo 'exec "$@"'; \
     } > /usr/local/bin/entrypoint.sh; \
-    chmod +x /usr/local/bin/entrypoint.sh; \
-    chown mysql:mysql /mysql;
+    chmod +x /usr/local/bin/entrypoint.sh;
 ENTRYPOINT ["entrypoint.sh"]
 
 # timezone
