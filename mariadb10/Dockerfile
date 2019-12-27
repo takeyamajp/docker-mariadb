@@ -3,7 +3,6 @@ MAINTAINER "Hiroki Takeyama"
 
 # mysql
 RUN mkdir /mysql; \
-    chown mysql:mysql /mysql; \
     sed -i 's/^\(datadir\) .*/\1 = \/mysql/' /etc/mysql/my.cnf;
 
 # entrypoint
@@ -20,7 +19,8 @@ RUN { \
     echo '} > /etc/mysql/conf.d/charcode.cnf'; \
     echo 'exec "$@"'; \
     } > /usr/local/bin/entrypoint.sh; \
-    chmod +x /usr/local/bin/entrypoint.sh;
+    chmod +x /usr/local/bin/entrypoint.sh; \
+    chown mysql:mysql /mysql;
 ENTRYPOINT ["entrypoint.sh"]
 
 # timezone
