@@ -3,7 +3,7 @@ MAINTAINER "Hiroki Takeyama"
 
 # mysql
 RUN mkdir /mysql; \
-    echo '[mysqld]\ndatadir=\/mysql' > /etc/mysql/conf.d/datadir.cnf;
+    echo '[mysqld]\ndatadir=/mysql' > /etc/mysql/conf.d/datadir.cnf;
 
 # entrypoint
 RUN { \
