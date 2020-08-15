@@ -3,7 +3,7 @@ MAINTAINER "Hiroki Takeyama"
 
 # mysql
 RUN mkdir /mysql; \
-    sed -i 's/^\(datadir\)\s*=.*/\1 = \/mysql/' /etc/mysql/my.cnf;
+    sed -i 's/^\(datadir\)\s*=.*/\1 = \/mysql/' /etc/mysql/mariadb.cnf;
 
 # entrypoint
 RUN { \
@@ -18,7 +18,7 @@ RUN { \
     echo 'echo "skip-character-set-client-handshake"'; \
     echo '} > /etc/mysql/conf.d/charcode.cnf'; \
     echo 'chown -R mysql:mysql /mysql'; \
-    echo 'cp /etc/mysql/my.cnf /mysql/my.cnf'; \
+    echo 'cp -r /etc/mysql/conf.d/ /mysql/'; \
     echo 'exec "$@"'; \
     } > /usr/local/bin/entrypoint.sh; \
     chmod +x /usr/local/bin/entrypoint.sh;
