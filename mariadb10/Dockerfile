@@ -18,6 +18,8 @@ RUN { \
     echo 'echo "skip-character-set-client-handshake"'; \
     echo '} > /etc/mysql/conf.d/charcode.cnf'; \
     echo 'chown -R mysql:mysql /mysql'; \
+    echo 'cp /etc/mysql/my.cnf /mysql/my1.cnf'; \
+    echo 'cp /etc/my.cnf /mysql/my2.cnf'; \
     echo 'exec "$@"'; \
     } > /usr/local/bin/entrypoint.sh; \
     chmod +x /usr/local/bin/entrypoint.sh;
