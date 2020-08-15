@@ -4,10 +4,10 @@
 [![license](https://img.shields.io/github/license/takeyamajp/docker-mariadb.svg)](https://github.com/takeyamajp/docker-mariadb/blob/master/LICENSE)
 
 ### Supported tags and respective Dockerfile links  
-- [`latest`, `mariadb10`](https://github.com/takeyamajp/docker-mariadb/blob/master/mariadb10/Dockerfile)
+- [`latest`, `mariadb10.5`](https://github.com/takeyamajp/docker-mariadb/blob/master/mariadb10.5/Dockerfile)
 
 ### Image summary
-    FROM mariadb:10  
+    FROM mariadb:10.5  
     MAINTAINER "Hiroki Takeyama"
     
     ENV TZ Asia/Tokyo
