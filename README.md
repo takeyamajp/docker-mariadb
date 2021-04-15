@@ -1,5 +1,5 @@
 # mariadb
-Star this repository if it was useful for you.  
+Star this repository if it is useful for you.  
 [![Docker Stars](https://img.shields.io/docker/stars/takeyamajp/mariadb.svg)](https://hub.docker.com/r/takeyamajp/mariadb/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/takeyamajp/mariadb.svg)](https://hub.docker.com/r/takeyamajp/mariadb/)
 [![license](https://img.shields.io/github/license/takeyamajp/docker-mariadb.svg)](https://github.com/takeyamajp/docker-mariadb/blob/master/LICENSE)
