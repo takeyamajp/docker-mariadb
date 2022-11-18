@@ -3,7 +3,7 @@ MAINTAINER "Hiroki Takeyama"
 
 # mysql
 RUN mkdir /mysql; \
-    sed -i 's/^\(datadir\)\s*=.*/\1 = \/mysql/' /etc/mysql/mariadb.conf.d/50-server.cnf;
+    sed -i 's/^#\(datadir\)\s*=.*/\1 = \/mysql/' /etc/mysql/mariadb.conf.d/50-server.cnf;
 
 # entrypoint
 RUN { \
